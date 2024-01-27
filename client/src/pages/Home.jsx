@@ -4,13 +4,8 @@ import {Loader,card,FormField} from '../components'
 
 
 const Home = () => {
-  const[loading,setLoading]=useState(false);
-  const[allPosts,setAllPosts]=useState(null);
-  const[searchText,setSearchText]=useState('');
-  const [searchTimeout, setSearchTimeout] = useState(null);
-  const [searchedResults, setSearchedResults] = useState(null);
 
-  const RenderCards=({data,title})=>{
+ const RenderCards=({data,title})=>{
     if(data?.length>0){
     return data.map((post)=><card key={post._id}{...post}/>);
   }
@@ -20,6 +15,14 @@ const Home = () => {
     </h2>
   );
   };
+  
+  const[loading,setLoading]=useState(false);
+  const[allPosts,setAllPosts]=useState(null);
+  const[searchText,setSearchText]=useState('');
+  const [searchTimeout, setSearchTimeout] = useState(null);
+  const [searchedResults, setSearchedResults] = useState(null);
+
+ 
   
   useEffect(()=>{
     const fetchPosts=async()=>{
