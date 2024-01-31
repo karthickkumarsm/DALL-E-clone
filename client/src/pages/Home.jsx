@@ -1,7 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import {Loader,Card,FormField} from '../components'
 
-const RenderCards=({data,title})=>{
+
+const Home = () => { 
+    const RenderCards=({data,title})=>{
     if(data?.length>0){
     return data.map((post)=><Card key={post._id}{...post}/>);
   }
@@ -11,8 +13,7 @@ const RenderCards=({data,title})=>{
     </h2>
   );
   };
-
-const Home = () => { 
+    
   const[loading,setLoading]=useState(false);
   const[allPosts,setAllPosts]=useState(null);
   const[searchText,setSearchText]=useState('');
