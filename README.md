@@ -1,6 +1,6 @@
 
 # Project Title
-DALL-E CLONE
+DALL-E CLONE-convert your creative ideas into pictures
 
 
 
